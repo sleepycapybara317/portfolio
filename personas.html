@@ -1,0 +1,218 @@
+<!doctype html>
+<html lang = "en">
+    <head>
+        <!-- CSS Bootstrap -->
+        <!-- javascript adapted from https://www.w3schools.com/w3css/w3css_slideshow.asp -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <link href="style.css" rel="stylesheet">
+        <title>CS1300: Personas & Storyboarding</title>
+    </head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg sticky-top navbar-light bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Portfolio</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+            <div class="collapse navbar-collapse text-right" id="navbarCollapse">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="./index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./about.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./work.html">Work & Play</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+<div class="container-fluid">
+<div class="d-flex flex-column">
+    <h1 style="align-self: center;">Personas & Storyboarding</h1>
+
+    <a class="js-scroll" id="Overview">
+    <h2>Overview</h2>
+        <p>
+            Through this project, I observe how users interact with and experience
+            a public interface: the mailroom kiosk at Brown University. After 
+            conducting contextual inquiry, I create personas and a storyboard to 
+            reflect the typical user's journey through retrieving their mail.
+        </p>
+    
+    <a id="Interface">
+    <h2>The Interface: Mail Services Kiosk</h2>
+        <p>
+            As you approach the entrance of the Mail Services Lobby, you'll 
+            stumble upon 2 electronic kiosks that allow students to see
+            how much mail they have (if any) and indicate to Mail Services 
+            that they have arrived to collect it.
+
+            <br>
+            <br>
+
+            Students generally visit the kiosks after receiving an email
+            from University Mail Services notifying them that their mail has been 
+            processed and is ready for pick up.
+            
+            To interact with the kiosks, the students must first swipe 
+            their Brown ID. If they have packages ready to be picked up, 
+            they can choose to retrieve them now or cancel the process and return at 
+            a later time. Finally, they are either transferred to the final screen 
+            or back to the home page.
+            <br>
+        </p>
+</div>
+
+<div class="d-flex justify-content-around">
+    <img class="sketches" src="sketch-home.png" alt="sketch 1: home screen" style="width: 87%; height: auto"> 
+    <img class="sketches" src="sketch-pickup.png" alt="sketch 2: pickup screen" style="width: 65%; height: auto"> 
+    <img class="sketches" src="sketch-final.png" alt="sketch 3: final screen" style="width: 65%; height: auto"> 
+    <div class="d-flex align-self-center">
+        <button class="btn btn-light" onclick="plusDivs(1)"> Next Screen &#10095;</button> 
+    </div>
+</div>
+
+<div class="d-flex flex-column">
+    <h2>Contextual Inquiry</h2>
+
+    <h3 id="Observations">Key Observations</h3>
+    <ul>
+        <li>Most users misswiped their Brown ID at least once because:</li>
+            <ul>
+                <li>User's ID was facing the wrong direction.</li>
+                <li>User swiped ID too quickly.</li>
+            </ul>
+        <li>Between the 2 kiosks, the orientation of the card readers were different 
+            (one was oriented vertically, the other horizontally). 
+            Users more frequently misswiped while using the kiosk on the right.</li>
+        <li>If users spent ~10 seconds misswiping, they would attempt the other kiosk.</li>
+      </ul>
+
+    <h3 id="Interviews">Interviews</h3>
+    <p> 
+        I interviewed 5 users to better understand their expectations, experiences, 
+        and challenges while interacting with the mailroom kiosk.
+    </p>
+
+    <h4>Interview Questions: </h4>
+    <ol>
+        <li>
+            How frequently do you use this interface and under what circumstances?
+        </li>
+        <li>
+            Do you normally select “pick up packages” or “cancel”? Why?
+        </li>
+        <li>
+            Are there any parts of this interface that you find confusing or challenging? 
+        </li>
+        <li>
+            Is there any information that you think is missing or is redundant from this screen? 
+        </li>
+        <li>
+            How long do you expect this entire process to take, from swiping to receiving your packages? 
+            Does the actual time spent match your expected time spent?
+        </li>
+    </ol>
+
+    <h4>Interview Summary: </h4>
+    <ul>
+        <li>Most users use the kiosk <mark>1-2 times per week</mark>. The frequency of their visits largely
+            depends on whether they allow their packages to accumulate or pick them up 
+            soon after each package/notification is received.
+        </li>
+        <li>The users interviewed had <mark>never pressed the "cancel" button</mark>.</li>
+        <li>While users find the interface fairly intuitive, they have <mark>issues swiping their ID</mark>. Specifically:
+            <ul>
+                <li>Users forget/are confused about which way to swipe (especially with the differing orientation of the card readers).</li>
+                <li>Sometimes, after the swiping of an ID, the screen displays a nonsensical sequence of numbers. 
+                    The user then has to manually delete the sequence and reswipe their ID.</li>
+            </ul>
+        </li>shop
+        <li>Users <mark>desire information about the size of the package</mark> received so they know whether they need to return
+            to their dorm after picking it up or can stuff it in their backpack and continue with their day.
+        </li>
+        <li>Users often <mark>use the kiosk between classes</mark>. Thus, they largely only swipe their ID if the mailroom does not look too busy.
+            Nonetheless, they desire an estimation of the wait time.</li>
+      </ul>
+      
+    <h2 id="Personas">Personas & Empathy Maps</h2>
+    <h4>1. Rushed Ryan</h4>
+    <p> 
+        Rushed Ryan is a junior student-athlete at Brown University. 
+    </p>
+
+    <p> 
+        He has an extremely tight schedule, and he is stressed he won't make it from the mailroom to his Biology seminar in time.
+
+        The faulty card reader and lack of information about wait time makes it hard for Ryan to judge whether or not he can grab his 
+        packages quickly enough to make it to class on time. 
+    </p>
+
+    <p>
+        Many Brown students use the kiosk between classes and activities. They are often in a rush and thus experience the same issues
+        as Ryan.
+    </p>
+    <img src="empathy-ryan.png" alt="empathy map 1: Rushed Ryan" style="width: 100%; height: auto"> 
+    
+    <h4 id="Storyboard">Rushed Ryan's User Journey:</h4>
+    <img src="storyboard.png" alt="storyboard of Rushed Ryan in mailroom" style="width: 100%; height: auto"> 
+
+    <a id="Conclusion">
+    <h2>Conclusion</h2>
+    Through the process of contextual inquiry of mailroom kiosk users, I uncovered useful insights I would not have found from a purely developer point-of-view.
+    By stepping into users' shoes, I could unearth where the interface excelled and where it fell short of solving users' problems.  
+</div>
+</div>
+
+<script>
+var slideIndex = 1;
+showDivs(slideIndex);
+
+function plusDivs(n) {
+  showDivs(slideIndex += n);
+}
+
+function showDivs(n) {
+  var i;
+  var x = document.getElementsByClassName("sketches");
+  if (n > x.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = x.length}
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
+  }
+  x[slideIndex-1].style.display = "flex";
+}
+</script>
+
+<script>
+// Jump to anchor
+window.addEventListener("hashchange", function () {
+    window.scrollTo(window.scrollX, window.scrollY - 70);
+});
+</script>
+
+<footer class="bg-white text-center">
+
+    <div class="container">
+        <p class="mb-0">
+            <hr></hr>
+            Made with <font color="hotpink">&hearts;</font> in Indiana
+        </p>
+    </div>
+</footer>
+
+<!-- jQuery, Popper.js, Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+</body>
+</html>
